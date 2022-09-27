@@ -3,7 +3,7 @@ import React from 'react';
 import styles from "./PatchnoteItem.module.css"
 
 const PatchNoteItem = ({patch}) => {
-	const {name, date, id, notes} = patch
+	const {name, date, notes} = patch
 	return (
 		<div className={styles.Item}>
 			<div className={styles.Group}>

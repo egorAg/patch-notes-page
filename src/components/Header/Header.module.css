@@ -1,0 +1,25 @@
+.Header {
+    display: flex;
+    gap: 12px;
+    padding: 1.5rem 20px;
+    background: #121215;
+}
+
+.Input {
+    background: #212226;
+    border: 1px solid #494949;
+    outline: none;
+    color: #cccccc;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.Button {
+    background: #27ae60;
+    color: #cccccc;
+    outline: none;
+    border: 0;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+    cursor: pointer;
+}

@@ -12,9 +12,7 @@ RUN npm i -g create-react-app
 
 RUN npm install
 
-RUN npm uninstall react-scripts
-
-RUN npm install react-scripts
+RUN npm cache clean
 
 #build project for static and node_modules
 RUN npm run build

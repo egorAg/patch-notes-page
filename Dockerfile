@@ -10,13 +10,11 @@ COPY ./ ./
 #install packages from package.json
 RUN npm i -g create-react-app
 
-RUN npm install
-
-RUN npm cache clean
+RUN yarn
 
 #build project for static and node_modules
-RUN npm run build
+RUN yarn build
 
 EXPOSE 3000
-ENTRYPOINT ["npm"]
-CMD ["run", "start"]
+ENTRYPOINT ["yarn"]
+CMD ["start"]

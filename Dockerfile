@@ -6,8 +6,8 @@ WORKDIR /ui
 
 ENV PATH /app/node_modules/.bin:$PATH
 
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
+RUN npm install
+RUN npm install react-scripts@3.4.1 -g
 
 #build project for static and node_modules
 COPY . ./

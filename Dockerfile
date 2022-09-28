@@ -8,15 +8,15 @@ WORKDIR /ui
 COPY ./ ./
 
 #install packages from package.json
-RUN yarn
+RUN npm install
 
-RUN yarn remove react-scripts
+RUN npm uninstall react-scripts
 
-RUN yarn add react-scripts
+RUN npm install react-scripts
 
 #build project for static and node_modules
-RUN yarn run build
+RUN npm run build
 
 EXPOSE 3000
-ENTRYPOINT ["yarn"]
+ENTRYPOINT ["npm"]
 CMD ["run", "start"]

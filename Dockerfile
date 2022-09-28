@@ -8,6 +8,8 @@ WORKDIR /ui
 COPY ./ ./
 
 #install packages from package.json
+RUN npm i -g create-react-app
+
 RUN npm install
 
 RUN npm uninstall react-scripts

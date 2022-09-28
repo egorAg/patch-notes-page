@@ -10,6 +10,10 @@ COPY ./ ./
 #install packages from package.json
 RUN yarn
 
+RUN yarn remove react-scripts
+
+RUN yarn add react-scripts
+
 #build project for static and node_modules
 RUN yarn run build
 

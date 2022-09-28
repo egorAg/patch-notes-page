@@ -1,5 +1,5 @@
 #set node version
-FROM node:16.10.0
+FROM node:latest
 
 #set workdir
 WORKDIR /ui

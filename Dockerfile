@@ -1,20 +1,18 @@
-# pull official base image
-FROM node:latest
+#set node version
+FROM node:16.10.0
 
-# set working directory
-WORKDIR /app
+#set workdir
+WORKDIR /ui
 
-# add `/app/node_modules/.bin` to $PATH
-ENV PATH /app/node_modules/.bin:$PATH
+#copy project files
+COPY ./ ./
 
-# install app dependencies
-COPY package.json ./
-COPY package-lock.json ./
-RUN npm install --silent
-RUN npm install react-scripts@3.4.1 -g --silent
+#install packages from package.json
+RUN yarn
 
-# add app
-COPY . ./
+#build project for static and node_modules
+RUN yarn run build
 
-# start app
-CMD ["npm", "start"]
+EXPOSE 3000
+ENTRYPOINT ["yarn"]
+CMD ["run", "start"]

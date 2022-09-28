@@ -4,14 +4,14 @@ FROM node:latest
 #set workdir
 WORKDIR /ui
 
-#copy project files
-COPY ./ ./
+ENV PATH /app/node_modules/.bin:$PATH
 
-RUN yarn
+RUN npm install --silent
+RUN npm install react-scripts@3.4.1 -g --silent
 
 #build project for static and node_modules
-RUN yarn build
+COPY . ./
 
 EXPOSE 3000
-ENTRYPOINT ["yarn"]
-CMD ["start"]
+ENTRYPOINT ["npm"]
+CMD ["run", "start"]

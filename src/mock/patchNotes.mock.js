@@ -1,5 +1,32 @@
 export const patchNotesMock = [
 	{
+		name: "Release 1.7.0",
+		date: "03.10.2022",
+		id: "8",
+		notes: [
+			{
+				mark: "NEW",
+				text: "adminjs to easy control of database without pgadmin",
+				endpoint: {
+					type: "GET",
+					url: "/admin"
+				}
+			},
+			{
+				mark: "FIX",
+				text: "Now reports on dashboard generates by the right way",
+				endpoint: {
+					type: "GET",
+					url: '/dashboard'
+				}
+			},
+			{
+				mark: "PENDING",
+				text: "Start development of new authorization service (v2)"
+			}
+		]
+	},
+	{
 		name: "Release 1.5.1a",
 		date: "21.09.2022",
 		id: "7",
